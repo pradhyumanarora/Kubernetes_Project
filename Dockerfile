@@ -8,4 +8,4 @@ RUN unzip vanilla.zip
 RUN cp -rvf vanilla/* .
 RUN rm -rf vanilla vanilla.zip
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
-EXPOSE 80
+EXPOSE 80 22
