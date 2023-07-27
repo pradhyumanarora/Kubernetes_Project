@@ -8,7 +8,8 @@ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page259/vanilla.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip vanilla.zip
-RUN cp -rvf vanilla/*
+RUN ls
+RUN cp -rvf vanilla/* .
 RUN rm -rf vanilla vanilla.zip
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80 22
