@@ -9,7 +9,7 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page259/va
 WORKDIR /var/www/html/
 RUN unzip vanilla.zip
 RUN ls
-RUN cp -rvf vanilla/* .
+RUN cp -rvf templatemo_526_vanilla/* .
 RUN rm -rf vanilla vanilla.zip
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80 22
