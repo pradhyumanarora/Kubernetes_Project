@@ -14,7 +14,7 @@ spec:
       spec:
        containers:
         - name: pradhyumanarora
-          image: pradhyumanaroraarora/pipeline-demo
+          image: pradhyumanarora/pipeline-demo
           imagePullPolicy: Always
           ports:
           - containerPort: 80
