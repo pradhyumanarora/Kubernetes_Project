@@ -11,4 +11,4 @@ RUN unzip vanilla.zip
 RUN cp -rvf templatemo_526_vanilla/* .
 RUN rm -rf vanilla vanilla.zip
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
-EXPOSE 80 22
+EXPOSE 80
