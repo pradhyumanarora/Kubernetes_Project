@@ -1,9 +1,7 @@
 - hosts: all
   become: true
   tasks: 
-     - name: Start kubectl proxy
-       command: kubectl proxy --port=8080 --address=0.0.0.0
      - name: create new deployment
-       command: kubectl apply -f /home/user-prarora/Deployment.yml
+       shell: "kubectl apply -f /home/user-prarora/Deployment.yml"
      - name: create new service
-       command: kubectl apply -f /home/user-prarora/Service.yml
+       shell: "kubectl apply -f /home/user-prarora/Service.yml"
