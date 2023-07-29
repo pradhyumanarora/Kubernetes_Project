@@ -2,10 +2,10 @@
   become: true
   tasks: 
      - name: delete old deployment
-       command: kubectl delete -f /home/user-prarora/Deployment.yml
+       command: kubectl delete -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config
      - name: delete old service
-       command: kubectl delete -f /home/user-prarora/Service.yml
+       command: kubectl delete -f /home/user-prarora/Service.yml --kubeconfig=/home/user-prarora/.kube/config
      - name: create new deployment
-       command: kubectl apply -f /home/user-prarora/Deployment.yml
+       command: kubectl apply -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config
      - name: create new service
-       command: kubectl apply -f /home/user-prarora/Service.yml
+       command: kubectl apply -f /home/user-prarora/Service.yml --kubeconfig=/home/user-prarora/.kube/config
