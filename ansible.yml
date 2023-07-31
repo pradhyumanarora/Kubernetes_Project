@@ -1,12 +1,12 @@
 - hosts: all
   become: true
   tasks: 
+     - name: minikube start
+       command: minikube start --vm = true
      - name: delete old deployment
        command: kubectl delete -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config --ignore-not-found
      - name: delete old service
        command: kubectl delete -f /home/user-prarora/Service.yml --kubeconfig=/home/user-prarora/.kube/config --ignore-not-found
-     - name: minikube start
-       command: minikube start --vm = true
      - name: create new deployment
        command: kubectl apply -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config
      - name: create new service
