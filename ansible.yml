@@ -3,6 +3,10 @@
   tasks: 
      - name: minikube delete
        command: minikube delete
+     - name: Install conntrack
+       apt:
+         name: conntrack
+         state: present
      - name: minikube start
        command: minikube start --driver=none --vm=true
      - name: delete old deployment
