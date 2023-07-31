@@ -1,8 +1,6 @@
 - hosts: all
   become: true
   tasks: 
-     - name: minikube start
-       command: minikube start --driver=docker
      - name: delete old deployment
        command: kubectl delete -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config --ignore-not-found
      - name: delete old service
