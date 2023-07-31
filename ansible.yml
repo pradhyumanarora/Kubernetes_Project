@@ -11,6 +11,6 @@
        command: kubectl apply -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config
      - name: create new service
        command: kubectl apply -f /home/user-prarora/Service.yml --kubeconfig=/home/user-prarora/.kube/config
-    - name: port forwarding
+     - name: port forwarding
        command: kubectl port-forward --address 0.0.0.0 service/pradhyumanarora 8069:80
     
