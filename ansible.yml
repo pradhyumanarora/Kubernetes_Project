@@ -8,7 +8,7 @@
          name: conntrack
          state: present
      - name: minikube start
-       command: minikube start --driver=none --vm=true
+       command: minikube start --driver=none --vm=true --force
      - name: delete old deployment
        command: kubectl delete -f /home/user-prarora/Deployment.yml --kubeconfig=/home/user-prarora/.kube/config --ignore-not-found
      - name: delete old service
